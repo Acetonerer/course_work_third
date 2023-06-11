@@ -4,11 +4,13 @@ FILE = "oper_test.json"
 
 
 class TestAll(unittest.TestCase):
+    """Тесты на работу функции форматирования даты"""
     def test_form_date(self):
         self.assertEqual(form_date("2019-08-26T10:50:58.294041"), "26.08.2019")
         self.assertEqual(form_date("2018-03-23T10:45:06.972075"), "23.03.2018")
         self.assertEqual(form_date("2019-03-23"), "23.03.2019")
-
+        
+    """Тесты на работу функции форматирования номера карты или счета"""
     def test_form_card_account(self):
         self.assertEqual(form_card_account("Счет 10848359769870775355"), "Счет **5355")
         self.assertEqual(form_card_account("Visa Platinum 1246377376343588"), "Visa Platinum 1246 37 ** **** 3588")

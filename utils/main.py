@@ -4,6 +4,7 @@ FILE = "operations.json"
 
 
 def main():
+    """Основной код"""
     operations = load_data(FILE)
     for operation in operations:
         operation["date"] = form_date(operation["date"])
