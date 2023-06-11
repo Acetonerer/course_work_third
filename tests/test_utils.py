@@ -20,9 +20,9 @@ class TestLoadData(unittest.TestCase):
     def test_load_data(self):
         file = [
                 {
-                    "id": 736942989,
+                    "id": 104807525,
                     "state": "EXECUTED",
-                    "date": "2019-09-06T00:48:01.081967"
+                    "date": "2019-06-01T06:46:16.803326"
                 },
                 {
                     "id": 580054042,
@@ -40,9 +40,9 @@ class TestLoadData(unittest.TestCase):
                     "date": "2019-05-19T12:51:49.023880"
                 },
                 {
-                    "id": 921286598,
+                    "id": 484201274,
                     "state": "EXECUTED",
-                    "date": "2018-03-09T23:57:37.537412"
+                    "date": "2019-04-11T23:10:21.514616"
                 }
-        ]
+                ]
         self.assertCountEqual(load_data(FILE), file)
