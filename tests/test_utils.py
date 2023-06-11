@@ -15,3 +15,4 @@ def test_form_card_account():
     assert form_card_account("MasterCard 3152479541115065") == "MasterCard 3152 47 ** **** 5065"
     assert form_card_account("Maestro 3806652527413662") == "Maestro 3806 65 ** **** 3662"
 
+
