@@ -1,7 +1,9 @@
 import json
 from datetime import datetime
 
-
+"""Функция загрузки данных из json файла,
+отделения выполненных опеаций и сортировки по дате 
+последних 5 операций"""
 def load_data(FILE):
     with open(FILE, "r", encoding="UTF -8") as file:
         operation = json.load(file)
@@ -16,7 +18,9 @@ def load_data(FILE):
         opers_sort = sorted(opers_last, key=lambda x: x["date"], reverse=True)
         return opers_sort
 
-
+"""Функция, получающая на входе номер счета или карты. 
+Она также определяет, что именно она получила, 
+а после маскирует номер звездочками и выводит в требуемом формате"""
 def form_card_account(str_):
     str_list = str_.split(' ')
     numb = str_list[-1]
@@ -28,7 +32,7 @@ def form_card_account(str_):
     else:
         return f"{str_list[0]} {str_list[1]} {numb[:4]} {numb[4:6]} ** **** {numb[-4:]}"
 
-
+"""Функция, приводящая дату в заявке к требуемому формату"""
 def form_date(data):
     date = datetime.fromisoformat(data)
     date_form = date.strftime("%d.%m.%Y")
