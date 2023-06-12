@@ -4,7 +4,11 @@ FILE = "operations.json"
 
 
 def main():
-    """Основной код"""
+    """
+    Основной код
+    Выводит информацию о 5 последних
+    отформатированных операциях
+    """
     operations = load_data(FILE)
     for operation in operations:
         operation["date"] = form_date(operation["date"])
