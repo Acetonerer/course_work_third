@@ -12,9 +12,9 @@ def load_data(FILE):
                     operations_exe.append(oper)
             except LookupError:
                 operation_error = "Операция не выполнена"
-        opers_last = operations_exe[-5:]
-        opers_sort = sorted(opers_last, key=lambda x: x["date"], reverse=True)
-        return opers_sort
+        opers_sort = sorted(operations_exe, key=lambda x: x["date"], reverse=True)
+        opers_last = opers_sort[:5]
+        return opers_last
 
 
 def form_card_account(str_):
